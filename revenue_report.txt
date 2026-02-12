@@ -1,0 +1,9 @@
+Total Revenue: 15000 RWF
+
+Revenue by Service Type:
+- Birth Certificate: 5000 RWF
+- Driving Test: 10000 RWF
+
+Approved Applications:
+ID: 1, Citizen: Alice, Service: Birth Certificate, Fee: 5000
+ID: 4, Citizen: Diane, Service: Driving Test, Fee: 10000
