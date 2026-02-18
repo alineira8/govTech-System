@@ -1,4 +1,4 @@
-package model;
+package services;
 
 public abstract class GovernmentService {
 
@@ -23,4 +23,8 @@ public abstract class GovernmentService {
     public double getFee() {
         return fee;
     }
+
+    public abstract void apply(String citizenId, double amountPaid);
+
+    public abstract void checkStatus();
 }

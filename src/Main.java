@@ -1,17 +1,19 @@
+import models.Application;
+import java.util.Scanner;
 
+public class Main {
 
-import model.*;
+    public static void main(String[] args) {
 
-public class Main{
-    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        Application application = new Application();
 
-        Citizen citizen = new Citizen("264566", "gyfhg", "amgf@gmail.com");
-        System.out.println(citizen.getCitizenId());
+        System.out.print("Enter Citizen ID: ");
+        String citizenId = scanner.nextLine();
 
-        BirthCertificateService birthCertificateService = new BirthCertificateService ();
-        System.out.println(birthCertificateService.getServiceId() + " " + birthCertificateService.getServiceName() + " " + birthCertificateService.getFee());
+        application.apply(citizenId);
 
-        DrivingTestService  drivingTestService = new  DrivingTestService ("134");
-        System.out.println( drivingTestService.getServiceId() + " " + drivingTestService.getServiceName() + " " + drivingTestService.getFee());
+        System.out.println("\nChecking Application Status...");
+        application.showProgress();
     }
 }

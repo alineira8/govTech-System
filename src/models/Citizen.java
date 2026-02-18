@@ -7,11 +7,12 @@ public class Citizen {
     private String email;
 
     public Citizen(String citizenId, String name, String email) {
-        if (citizenId.length() == 16){
-            this.citizenId = citizenId;}
-        else{
-            System.out.println("id should be 16 digits.");
+
+        if (citizenId == null || !citizenId.matches("\\d{16}")) {
+            throw new IllegalArgumentException("Citizen ID must be exactly 16 digits.");
         }
+
+        this.citizenId = citizenId;
         this.name = name;
         this.email = email;
     }
