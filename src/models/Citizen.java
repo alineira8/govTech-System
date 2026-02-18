@@ -1,4 +1,4 @@
-package model;
+package models;
 
 public class Citizen {
 
@@ -7,7 +7,11 @@ public class Citizen {
     private String email;
 
     public Citizen(String citizenId, String name, String email) {
-        this.citizenId = citizenId;
+        if (citizenId.length() == 16){
+            this.citizenId = citizenId;}
+        else{
+            System.out.println("id should be 16 digits.");
+        }
         this.name = name;
         this.email = email;
     }
