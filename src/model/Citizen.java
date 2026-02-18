@@ -1,3 +1,5 @@
+package model;
+
 public class Citizen {
 
     private String citizenId;
